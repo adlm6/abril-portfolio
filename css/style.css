@@ -4,17 +4,17 @@
    ========================================================= */
 :root {
   /* --- Color palette --- */
-  --bg:            #ffe9f4;   /* soft lavender page background */
+  --bg:            #ffedf6;   /* soft lavender page background */
   --bg-alt:        #FFFFFF;   /* card / surface background */
   --ink:           #221C35;   /* near-black plum for body text */
   --ink-soft:      #58506E;   /* muted plum for secondary text */
 
-  --accent-violet: #FFC2E2;   /* primary brand accent */
-  --accent-violet-dark: #d64f87;
+  --accent-violet: #d64f87;   /* primary brand accent */
+  --accent-violet-dark: #cc296c;
   --accent-coral:  #FF9E85;   /* warm accent */
   --accent-mint:   #9BE8C7;   /* cool accent */
   --accent-butter: #FFD97D;   /* highlight accent */
-  --accent-pink:   #ffe9f4;   /* extra accent for badges */
+  --accent-pink:   #F4F1FF;   /* extra accent for badges */
 
   --border: #E4DEFB;
 
