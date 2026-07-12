@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Jordan Lee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Jordan<span>.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="photography.html">Photography</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" class="nav-cta">Resume</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="container page-header reveal">
+  <p class="eyebrow">About Me</p>
+  <h1>The short version: I like building things that hold up under real use.</h1>
+</div>
+
+<section class="section-tight">
+  <div class="container about-grid">
+    <div class="about-photo reveal">
+      <!-- EDIT: swap for a second photo of yourself, assets/img/about.jpg -->
+      <img src="assets/img/about.jpg" alt="Jordan Lee working" onerror="this.src='https://placehold.co/600x750/9BE8C7/221C35?text=About+Photo'">
+    </div>
+
+    <div class="reveal">
+      <!-- EDIT: full bio. Keep it to 2–3 short paragraphs. -->
+      <p>
+        I'm a third-year at Yale double majoring in Computer Science and Economics, which is a
+        roundabout way of saying I'm interested in how systems — whether they're distributed
+        databases or labor markets — actually behave once real people start using them.
+        Over the past two years I've spent my summers and semesters embedded on engineering
+        teams, shipping features that touched real users rather than just problem sets.
+      </p>
+      <p>
+        My coursework leans into algorithms, systems, and econometrics, but most of what I know
+        about building software came from internships: debugging production issues at 2am,
+        arguing about API design in code review, and learning that the hardest part of most
+        projects is the requirements, not the code. I care about writing software that's
+        readable six months later, and about backing decisions — technical or economic — with
+        actual data instead of vibes.
+      </p>
+      <p>
+        Outside of class and work, I edit <a href="photography.html" style="color:var(--accent-violet-dark); text-decoration:underline;">film photography</a> and
+        run economic models on things that don't need it, purely for fun.
+      </p>
+
+      <div class="skill-group">
+        <h3>Languages &amp; Frameworks</h3>
+        <div class="tag-row">
+          <!-- EDIT: your real stack -->
+          <span class="tag">Python</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <span class="tag">C++</span>
+          <span class="tag">Node.js</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="tag-row">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">Docker</span>
+          <span class="tag">AWS</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Pandas</span>
+          <span class="tag">Figma</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Coursework</h3>
+        <div class="tag-row">
+          <span class="tag">Data Structures &amp; Algorithms</span>
+          <span class="tag">Systems Programming</span>
+          <span class="tag">Econometrics</span>
+          <span class="tag">Game Theory</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <!-- EDIT: your real internship / experience timeline -->
+        <div class="timeline-item">
+          <div class="when">Summer 2026</div>
+          <div class="role">Software Engineering Intern</div>
+          <div class="org">Company Name</div>
+          <p>One line on what you shipped or owned during this internship.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="when">Summer 2025</div>
+          <div class="role">Software Engineering Intern</div>
+          <div class="org">Company Name</div>
+          <p>One line on what you shipped or owned during this internship.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="when">2023 – Present</div>
+          <div class="role">B.S. Computer Science &amp; Economics</div>
+          <div class="org">Yale University</div>
+          <p>Relevant coursework, clubs, or research you want a recruiter to see.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© 2026 Jordan Lee. Built with HTML, CSS &amp; JS.</p>
+    <div class="footer-social">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+      <a href="mailto:you@example.com" aria-label="Email">@</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
