@@ -4,7 +4,7 @@
    ========================================================= */
 :root {
   /* --- Color palette --- */
-  --bg:            #FFC2E2;   /* soft lavender page background */
+  --bg:            #ffe9f4;   /* soft lavender page background */
   --bg-alt:        #FFFFFF;   /* card / surface background */
   --ink:           #221C35;   /* near-black plum for body text */
   --ink-soft:      #58506E;   /* muted plum for secondary text */
