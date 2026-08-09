@@ -52,7 +52,7 @@ if (revealEls.length) {
 const contactForm = document.querySelector("#contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const status = document.querySelector("#form-status");
     const name = contactForm.name.value.trim();
     const email = contactForm.email.value.trim();
