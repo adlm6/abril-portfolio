@@ -83,7 +83,7 @@ function showStatus(el, text, kind) {
   el.classList.add("show", kind);
 } */
 
-  // =========================================================
+/*   // =========================================================
 // CONTACT FORM — sends to Formspree via fetch
 // =========================================================
 const contactForm = document.querySelector("#contact-form");
@@ -140,6 +140,76 @@ if (contactForm) {
 }
 
 // Helper to show status messages
+function showStatus(el, text, kind) {
+  if (!el) return;
+  el.textContent = text;
+  el.className = "form-status show " + kind; // 'ok' or 'err'
+}
+ */
+
+// =========================================================
+// CONTACT FORM — sends to Formspree via fetch (JSON)
+// =========================================================
+const contactForm = document.querySelector("#contact-form");
+const formStatus = document.querySelector("#form-status");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Use the form from the event
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Client-side validation
+    if (!name || !email || !message) {
+      showStatus(formStatus, "⚠️ Please fill out every field.", "err");
+      return;
+    }
+    if (!emailPattern.test(email)) {
+      showStatus(formStatus, "⚠️ Please enter a valid email address.", "err");
+      return;
+    }
+
+    // Build the data object
+    const payload = { name, email, message };
+    console.log("📤 Sending to Formspree:", payload); // ← DEBUG
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      console.log("📥 Response from Formspree:", data); // ← DEBUG
+
+      if (response.ok) {
+        showStatus(formStatus, "✅ Message sent successfully! I'll get back to you soon.", "ok");
+        form.reset();
+      } else {
+        // Formspree error messages
+        if (data.error === "empty_form") {
+          showStatus(formStatus, "⚠️ Form cannot be empty. Please fill all fields.", "err");
+        } else {
+          showStatus(formStatus, `❌ ${data.error || "Something went wrong. Please try again."}`, "err");
+        }
+      }
+    } catch (error) {
+      console.error("❌ Submit error:", error);
+      showStatus(formStatus, "❌ Network error – please check your connection.", "err");
+    }
+  });
+}
+
+// Helper to show status messages (keep this if not already defined)
 function showStatus(el, text, kind) {
   if (!el) return;
   el.textContent = text;
