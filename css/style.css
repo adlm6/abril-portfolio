@@ -418,6 +418,7 @@ body {
 .project-card:nth-child(1) .project-thumb { background: linear-gradient(135deg, var(--accent-violet), #A99CFF); }
 .project-card:nth-child(2) .project-thumb { background: linear-gradient(135deg, var(--accent-coral), var(--accent-butter)); }
 .project-card:nth-child(3) .project-thumb { background: linear-gradient(135deg, var(--accent-mint), #6FC9A8); }
+.project-card:nth-child(4) .project-thumb { background: linear-gradient(135deg, var(--accent-mint), #e0bdff); }
 
 .project-body { padding: 26px; display: flex; flex-direction: column; flex: 1; }
 .project-body h3 { font-size: 1.25rem; margin-bottom: 8px; }
